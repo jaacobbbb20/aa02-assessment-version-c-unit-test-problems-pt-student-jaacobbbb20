@@ -13,7 +13,16 @@ getAverage(1.12, 2.23, 3.34, 4.45); // '$2.79'
 getAverage(4.99, 9.99, 19.99); // '$11.66'
 ***********************************************************************/
 
-// Your code here 
+const getAverage = (...prices) => {
+  if (prices.length === 0) return '$0.00';
+
+  const sum = prices.reduce((total, price) => total + price, 0);
+
+  const average = sum / prices.length;
+
+  return `$${average.toFixed(2)}`;
+
+};
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {

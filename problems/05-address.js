@@ -17,7 +17,11 @@ address3("Blaxland NSW 2774");                       // "42 Wallaby Way Blaxland
 ***********************************************************************/
 
 function createAddress(street) {
-  // Your code here 
+  
+  return function(restOfAddress) {
+
+    return `${street} ${restOfAddress}`;
+  };
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

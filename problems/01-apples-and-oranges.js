@@ -21,7 +21,20 @@ applesAndOranges(obj3) // 5
 ***********************************************************************/
 
 function applesAndOranges(obj) {
-  // Your code here 
+  let count = 0;
+  
+  for (const key in obj) {
+
+    if (key.includes("apple") || key.includes("orange")) {
+      count++;
+    }
+
+    if (obj[key].includes("apple") || obj[key].includes("orange")) {
+      count++;
+    }
+  }
+
+  return count;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

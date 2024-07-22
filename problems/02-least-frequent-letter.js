@@ -12,7 +12,25 @@ leastFrequentLetter("Cheese") // "C", "h", or "s"
 ***********************************************************************/
 
 function leastFrequentLetter(string) {
-  // Your code here 
+  
+  const characterCount = {};
+
+  for (const char of string) {
+    characterCount[char] = (characterCount[char] || 0) + 1;
+  }
+
+  let leastFrequentChar = null;
+  let minFrequency = Infinity;
+
+  for (const char in characterCount) {
+    const count = characterCount[char];
+    if (count < minFrequency) {
+      minFrequency = count;
+      leastFrequentChar = char;
+    }
+  }
+
+  return leastFrequentChar;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

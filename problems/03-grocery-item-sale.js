@@ -17,7 +17,13 @@ console.log(applySale(groceryItems)); // [ {name: "walnuts", price: 12} ]
 *******************************************************************************/
 // Your code here 
 function applySale(items) {
-  // Your code here 
+  
+  return items
+    .filter(item => item.price > 10)
+    .map(item => ({
+      name: item.name,
+      price: (item.price * 0.80)
+    }));
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS LINE**********************/
